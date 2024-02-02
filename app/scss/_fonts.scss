@@ -1,0 +1,44 @@
+@font-face{
+  font-family: 'Poppins';
+  font-weight: 900;
+  font-style: normal;
+  src:  url('../fonts/poppins/Poppins-Black.woff2') format('woff2'),
+        url('../fonts/poppins/Poppins-Black.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-style: normal;
+  src:  url('../fonts/poppins/Poppins-SemiBold.woff2') format('woff2'),
+        url('../fonts/poppins/Poppins-SemiBold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-style: normal;
+  src:  url('../fonts/poppins/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/poppins/Poppins-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-style: normal;
+  src:  url('../fonts/poppins/Poppins-Light.woff2') format('woff2'),
+        url('../fonts/poppins/Poppins-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Rubik Broken Fax';
+  font-weight: 400;
+  font-style: normal;
+  src:  url('../fonts/RubikBrokenFax-Regular.woff2') format('woff2'),
+        url('../fonts/RubikBrokenFax-Regular.woff') format('woff');
+  font-display: swap;
+}
