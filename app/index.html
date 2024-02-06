@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
+    <div class="popup">
+      <div class="popup__bg">
+        <h2 class="popup__title title">Замовити дзвінок</h2>
+        <span class="popup__info">Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</span>
+        <form class="popup__form" action="#">
+          <input class="popup__name" type="text" name="name" placeholder="Ім’я" required />
+          <input class="popup__phone" type="phone" name="phone" placeholder="Телефон" required />
+          <input class="popup__email" type="email" name="email" placeholder="Електронна пошта" required />
+          <button class="popup__btn call-button" type="submit">Замовити дзвінок</button>
+        </form>
+        <span class="popup__policy">Натискаючи на кнопку <a class="popup__link" href="#">я погоджуюсь з політикою конфіденційності</a></span>
+      </div>
+    </div>
     <header class="header">
       <div class="container">
         <nav class="nav">
@@ -239,7 +252,6 @@
           </div>
         </div>
       </section>
-      <!--
       <section id="chain" class="chain">
         <div class="container">
           <div class="chain__wrapper">
@@ -249,10 +261,10 @@
               <form class="chain__form" action="#">
                 <input class="chain__name" type="text" name="name" placeholder="Ім’я" required />
                 <input class="chain__phone" type="phone" name="phone" placeholder="Телефон" required />
-                <input class="chain__email" type="email" name="phone" placeholder="Електронна пошта" required />
+                <input class="chain__email" type="email" name="email" placeholder="Електронна пошта" required />
                 <button class="chain__btn call-button" type="submit">Замовити дзвінок</button>
               </form>
-              <span class="chain__policy">Натискаючи на кнопку<a class="chain__link" href="#">я погоджуюсь з політикою конфіденційності</a></span>
+              <span class="chain__policy">Натискаючи на кнопку <a class="chain__link" href="#">я погоджуюсь з політикою конфіденційності</a></span>
             </div>
             <div class="chain__map">
               <iframe
@@ -268,9 +280,9 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
           <a class="footer__logo logo" href="#">
@@ -305,14 +317,14 @@
               </li>
               <ul class="footer__social-list">
                 <li class="footer__social-item">
-                  <a class="footer__social-link footer__social-link--facebook" href="#">
+                  <a class="footer__social-link footer__social-link--facebook call-social" href="#">
                     <svg width="32" height="32">
                       <use xlink:href="images/svg/sprite.svg#facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="footer__social-item">
-                  <a class="footer__social-link footer__social-link--instagram" href="#">
+                  <a class="footer__social-link footer__social-link--instagram call-social" href="#">
                     <svg width="32" height="32">
                       <use xlink:href="images/svg/sprite.svg#instagram"></use>
                     </svg>
@@ -329,7 +341,7 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="js/main.min.js"></script>
   </body>

@@ -31,10 +31,47 @@ body {
   background-color: $color-brand-light;
   color: $color-text-defolt;
   @extend %poppins-600;
+  transition: background-color 0.2s, color 0.2s;
 
   @include mq(phone) {
     padding: 10px 20px;
     font-size: 18px;
+  }
+
+  &:hover {
+    background-color: $bg-burger;
+    color: $color-brand-dark;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 20px -1px rgba(70,89,41,0.89);
+  }
+
+  &:active {
+    border: 2px solid $color-primary-dark;
+  }
+}
+
+.call-social {
+  svg {
+    fill: $color-text-defolt;
+    transition: fill 0.2s, opacity 0.2s, scale 0.2s;
+  }
+
+  &:hover {
+    svg {
+      fill: $color-brand-light;
+    }
+  }
+
+  &:focus {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    transform: scale(1.1);
   }
 }
 
@@ -125,6 +162,7 @@ body {
   transition: transform 0.4s;
   background-color: $bg-burger;
   overflow: hidden;
+  z-index: 99;
 
   &::after {
     position: absolute;

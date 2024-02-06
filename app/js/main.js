@@ -1,4 +1,26 @@
 $(function () {
+
+  $('.nav__button, .bakery__button').on('click', function(){
+  $('.popup').toggleClass('popup--active');
+  $('body').toggleClass('lock');
+  });
+
+  $('.burger').on('click', function () {
+    $('.burger').toggleClass('burger__line--active');
+    $('body').toggleClass('lock');
+    $('.burger-nav').toggleClass('burger-nav--active');
+  });
+
+  $(document).mouseup( function(e){  
+  var div = $('.popup'); 
+		if ($('.popup').is(e.target)
+		    && $('.popup__bg').has(e.target).length === 0 ) { 
+      $('.popup').removeClass('popup--active');
+      $('body').removeClass('lock');
+		}
+});
+
+
   $('.format__list').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -7,9 +29,29 @@ $(function () {
     dots: true,
     responsive: [
         {
-          breakpoint: 769,
+          breakpoint: 1211,
         settings: {
-            arrows : false,
+            arrows: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 11200
+          }
+        },
+        {
+          breakpoint: 969,
+        settings: {
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 11200
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            arrows: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
@@ -30,28 +72,5 @@ $(function () {
       $('.header').removeClass('header__top--sticky');
     }
   });
-
-  $('.burger').on('click', function () {
-    $('.burger').toggleClass('burger__line--active');
-    $('body').toggleClass('lock');
-    $('.burger-nav').toggleClass('burger-nav--active');
-  });
 });
 
-$(window).on('load resize', function() {
-      if ($(window).width() < 769) {
-        $('.format__list:not(.slick-initialized)').slick({
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1
-        });
-  } if ($(window).width() > 769) {
-    $(".format__list.slick-initialized").slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      prevArrow: '<button type="button" class="format__arrow format__arrow--prev"><svg width="36" height="23"><use xlink:href="images/svg/sprite.svg#left-arrow"></use></svg></button>',
-      nextArrow: '<button type="button" class="format__arrow format__arrow--next"><svg width="36" height="23"><use xlink:href="images/svg/sprite.svg#left-arrow"></use></svg></button>',
-      dots: true,
-    });
-      }
-    });
